@@ -20,3 +20,13 @@ CREATE TABLE `searchprofile` (
 `userprofile_id` int NOT NULL DEFAULT '0',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+ROP TABLE IF EXISTS `matching`;
+CREATE TABLE `matching` (
+`id` int NOT NULL DEFAULT '0',
+`timestamp` timestamp,
+`userprofile_id` int NOT NULL DEFAULT '0',
+`candidateprofile_id` int NOT NULL DEFAULT '0',
+`unseen_profile` boolean,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
